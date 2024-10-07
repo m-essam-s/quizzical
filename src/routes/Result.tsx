@@ -24,6 +24,5 @@ const Result = () => {
             <Button to='/' text='Play again' />
         </>
     );
-};
-
+}
 export default Result;

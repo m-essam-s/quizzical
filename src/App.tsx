@@ -15,12 +15,7 @@ const App = () => {
     type: 0,
   })
 
-  // const [quizAnswers,] = useState({
-  //   question1: '',
-  //   question2: '',
-  //   question3: '',
-  //   question4: '',
-  // })
+  const [quizAnswers, setQuizAnswers] = useState([])
 
   return (
     <BrowserRouter>
@@ -30,8 +25,8 @@ const App = () => {
           <Routes>
             <Route path='/' element={<Home />} />
             <Route path='/getting-ready' element={<GettingReady setFormData={setQuizPreferences} />} />
-            <Route path='/quiz' element={<Quiz formData={quizPreferences} />} />
-            <Route path='/result' element={<Result />} />
+            <Route path='/quiz' element={<Quiz formData={quizPreferences} setUserAnswers={setQuizAnswers} />} />
+            <Route path='/result' element={<Result answers={quizAnswers} />} />
           </Routes>
         </section>
         <img className="fixed left-0 bottom-0" src='/bl-shape.png' alt="Shape Bottom" />

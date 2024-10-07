@@ -10,20 +10,15 @@ const Question = (props: {
     question: string,
     correct_answer: string,
     incorrect_answers: string[]
+    shuffled_answers: string[]
     userAnswer: string
     handleAnswerChange: (event: React.ChangeEvent<HTMLInputElement>) => void
 }) => {
 
-
-
-
-
     const [answers] = useState(() => {
-        const allAnswers = [...props.incorrect_answers, props.correct_answer];
-        return allAnswers.sort(() => Math.random() - 0.5);
+
+        return props.shuffled_answers;
     });
-
-
 
     return (
         <div className="border-b-2 border-custom-br mb-4 p-2">

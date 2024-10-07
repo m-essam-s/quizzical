@@ -33,7 +33,7 @@ const GettingReady = (props: {
 
     const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
         event.preventDefault();
-        console.log(formData);
+        // console.log(formData);
         props.setFormData(formData);
         navigate('/quiz');
     };
