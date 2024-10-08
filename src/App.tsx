@@ -4,7 +4,6 @@ import { useState } from 'react'
 import Home from './routes/Home'
 import GettingReady from './routes/GettingReady'
 import Quiz from './routes/Quiz'
-import Result from './routes/Result'
 
 import './App.css'
 
@@ -15,7 +14,7 @@ const App = () => {
     type: 0,
   })
 
-  const [quizAnswers, setQuizAnswers] = useState([])
+
 
   return (
     <BrowserRouter>
@@ -25,8 +24,7 @@ const App = () => {
           <Routes>
             <Route path='/' element={<Home />} />
             <Route path='/getting-ready' element={<GettingReady setFormData={setQuizPreferences} />} />
-            <Route path='/quiz' element={<Quiz formData={quizPreferences} setUserAnswers={setQuizAnswers} />} />
-            <Route path='/result' element={<Result answers={quizAnswers} />} />
+            <Route path='/quiz' element={<Quiz formData={quizPreferences} />} />
           </Routes>
         </section>
         <img className="fixed left-0 bottom-0" src='/bl-shape.png' alt="Shape Bottom" />

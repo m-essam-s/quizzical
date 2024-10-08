@@ -12,6 +12,7 @@ const Question = (props: {
     incorrect_answers: string[]
     shuffled_answers: string[]
     userAnswer: string
+    isCorrect: boolean
     handleAnswerChange: (event: React.ChangeEvent<HTMLInputElement>) => void
 }) => {
 
