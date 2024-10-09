@@ -25,8 +25,8 @@ A dynamic quiz app that fetches trivia questions from the [Open Trivia Database]
 1. Clone the repository:
 
     ```bash
-    git clone https://github.com/yourusername/quiz-app.git
-    cd quiz-app
+    git clone https://github.com/m-essam-s/quizzical.git
+    cd quizzical
     ```
 
 2. Install the dependencies:
@@ -35,14 +35,12 @@ A dynamic quiz app that fetches trivia questions from the [Open Trivia Database]
     npm install
     ```
 
-3. Start the app:
+3. Run the app:
 
     ```bash
-    npm start
+    npm run dev
     ```
-
-The app should now be running on [http://localhost:3000](http://localhost:3000).
-
+    
 ## Usage
 
 1. Select the category, difficulty, and type of questions.
