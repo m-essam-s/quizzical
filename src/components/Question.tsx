@@ -25,7 +25,6 @@ const Question = (props: {
         <div className="border-b-2 border-custom-br mb-4 p-2">
             <p className="flex justify-between">
                 <span className="border rounded-md bg-sky-100 border-sky-300 italic px-2">{props.category}</span>
-                <span className="border rounded-md bg-sky-100 border-sky-300 italic px-2">{props.id}</span>
                 <span
                     className={
                         clsx(
