@@ -1,4 +1,4 @@
-# Trivia Quiz App
+# Quizzical
 
 A dynamic quiz app that fetches trivia questions from the [Open Trivia Database](https://opentdb.com/) (OpenTDB) API based on user preferences such as category, difficulty, and question type. The app is built with React, using modern hooks like `useState`, `useEffect`, and `useRef` for optimized data fetching and state handling.
 
