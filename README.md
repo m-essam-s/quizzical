@@ -1,50 +1,59 @@
-# React + TypeScript + Vite
+# Trivia Quiz App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A dynamic quiz app that fetches trivia questions from the [Open Trivia Database](https://opentdb.com/) (OpenTDB) API based on user preferences such as category, difficulty, and question type. The app is built with React, using modern hooks like `useState`, `useEffect`, and `useRef` for optimized data fetching and state handling.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **Customizable Questions:** Users can select the category, difficulty, and type of questions.
+- **Dynamic Question Fetching:** Trivia questions are fetched in real-time from the OpenTDB API.
+- **Multiple Answer Formats:** Supports both multiple-choice and true/false questions.
+- **Shuffled Answers:** The app shuffles answers to avoid bias.
+- **Instant Feedback:** Users get feedback on whether their answers are correct.
+- **Final Score:** Displays the total number of correct answers at the end of the quiz.
+- **Replay Option:** Allows users to play again after completing a quiz.
 
-## Expanding the ESLint configuration
+## Technologies Used
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+- **React**: For building the user interface and managing state.
+- **TypeScript**: For type safety and improved code quality.
+- **nanoid**: For generating unique IDs for each question.
+- **clsx**: For conditional class name management.
+- **html-entities**: For decoding HTML entities in the quiz questions.
 
-- Configure the top-level `parserOptions` property like this:
+## Installation
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+1. Clone the repository:
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+    ```bash
+    git clone https://github.com/yourusername/quiz-app.git
+    cd quiz-app
+    ```
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+2. Install the dependencies:
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+    ```bash
+    npm install
+    ```
+
+3. Start the app:
+
+    ```bash
+    npm start
+    ```
+
+The app should now be running on [http://localhost:3000](http://localhost:3000).
+
+## Usage
+
+1. Select the category, difficulty, and type of questions.
+2. Answer the quiz questions by selecting an option.
+3. Submit your answers to get feedback and see your score.
+4. Replay the quiz by clicking "Play Again" after the game ends.
+
+## Contributing
+
+Feel free to open an issue or submit a pull request for any bugs or improvements.
+
+## License
+
+This project is licensed under the MIT License.
