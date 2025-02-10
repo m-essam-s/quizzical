@@ -1,50 +1,22 @@
-# React + TypeScript + Vite
+# Quizzical
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This project is Solo Project #1 in the Scrimba Frontend Developer Career Path. It is a quiz app that allows users to take a quiz and see their score at the end. The user can also see the correct answers to the questions they got wrong.
 
-Currently, two official plugins are available:
+## Live Site
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+The live site can be found [here](https://messams-scrimba-quizzical.netlify.app).
 
-## Expanding the ESLint configuration
+## About this Course
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+This project was created as part of the [Learn React](https://scrimba.com/learn-react-c0e) course by Bob Ziroll.
 
-- Configure the top-level `parserOptions` property like this:
+## What I Learned
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+1- Event Listeners
+2- State
+3- Conditional Rendering
+4- State management in React
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+## Author
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
-
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+- Code by [Mohamed Essam](https://github.com/m-essam-s).
