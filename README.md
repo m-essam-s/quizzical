@@ -1,69 +1,102 @@
 # Quizzical
 
-A dynamic quiz app that fetches trivia questions from the [Open Trivia Database](https://opentdb.com/) (OpenTDB) API based on user preferences such as category, difficulty, and question type. The app is built with React, using modern hooks like `useState`, `useEffect`, and `useRef` for optimized data fetching and state handling.
+Quizzical is a React-based quiz application that allows users to select their quiz preferences and take a quiz based on those preferences. The application fetches quiz questions from an API and displays the results to the user.
+
+## Table of Contents
+
+- [Features](#features)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Project Structure](#project-structure)
+- [Contributing](#contributing)
+- [License](#license)
 
 ## Features
 
-- **Customizable Questions:** Users can select the category, difficulty, and type of questions.
-- **Dynamic Question Fetching:** Trivia questions are fetched in real-time from the OpenTDB API.
-- **Multiple Answer Formats:** Supports both multiple-choice and true/false questions.
-- **Shuffled Answers:** The app shuffles answers to avoid bias.
-- **Instant Feedback:** Users get feedback on whether their answers are correct.
-- **Final Score:** Displays the total number of correct answers at the end of the quiz.
-- **Replay Option:** Allows users to play again after completing a quiz.
-
-## Technologies Used
-
-- **React**: For building the user interface and managing state.
-- **TypeScript**: For type safety and improved code quality.
-- **nanoid**: For generating unique IDs for each question.
-- **clsx**: For conditional class name management.
-- **html-entities**: For decoding HTML entities in the quiz questions.
+- Select quiz preferences including category, difficulty, amount, and type of questions.
+- Fetch quiz questions from an API based on user preferences.
+- Display quiz questions and handle user answers.
+- Show quiz results and allow users to retake the quiz.
 
 ## Installation
+
+To get started with Quizzical, follow these steps:
 
 1. Clone the repository:
 
     ```bash
     git clone https://github.com/m-essam-s/quizzical.git
-    cd quizzical
     ```
 
-2. Install the dependencies:
+2. Navigate to the project directory:
 
-    ```bash
-    npm install
-    ```
+   ```bash
+   cd quizzical
+   ```
 
-3. Run the app:
+3. Install the dependencies:
 
-    ```bash
-    npm run dev
-    ```
+   ```bash
+   npm install
+   ```
 
 ## Usage
 
-1. Select the category, difficulty, and type of questions.
-2. Answer the quiz questions by selecting an option.
-3. Submit your answers to get feedback and see your score.
-4. Replay the quiz by clicking "Play Again" after the game ends.
+To run the application locally, use the following command:
 
-## Live Site
+```bash
+npm run dev
+```
 
-The live site can be found [here](https://messams-scrimba-quizzical.netlify.app).
+This will start the development server and open the application in your default web browser. You can then interact with the application and take quizzes based on your preferences.
 
-## About this Course
+## Project Structure
 
-This project was created as part of the [Learn React](https://scrimba.com/learn-react-c0e) course by Bob Ziroll.
+The project structure is organized as follows:
+
+```plaintext
+quizzical/
+├── public/
+│   ├── index.html
+│   ├── tr-shape.png
+│   └── bl-shape.png
+├── src/
+│   ├── components/
+│   │   └── Question.tsx
+│   ├── routes/
+│   │   ├── GettingReady.tsx
+│   │   ├── Home.tsx
+│   │   └── Quiz.tsx
+│   ├── lib/
+│   │   ├── data.ts
+│   │   └── definitions.ts
+│   ├── App.tsx
+│   ├── App.css
+│   ├── index.tsx
+│   └── index.css
+├── package.json
+└── README.md
+```
+
+### Key Files
+
+- `src/App.tsx`: Main application component that handles routing and quiz preferences.
+- `src/components/Question.tsx`: Component for displaying individual quiz questions.
+- `src/routes/GettingReady.tsx`: Component for selecting quiz preferences.
+- `src/routes/Quiz.tsx`: Component for displaying the quiz and handling quiz submission.
+- `src/lib/data.ts`: Contains data and functions for fetching quiz questions from the API.
+- `src/lib/definitions.ts`: Defines TypeScript interfaces for the project.
 
 ## Contributing
 
-Feel free to open an issue or submit a pull request for any bugs or improvements.
+Contributions are welcome! If you have any suggestions or improvements, please create an issue or submit a pull request.
+
+1. Fork the repository.
+2. Create a new branch (`git checkout -b feature-branch`).
+3. Make your changes and commit them (`git commit -m 'Add new feature'`).
+4. Push to the branch (`git push origin feature-branch`).
+5. Create a pull request.
 
 ## License
 
-This project is open source and available under the [MIT License](./LICENSE).
-
-## Author
-
-- Code by [Mohamed Essam](https://github.com/m-essam-s).
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for more details.
