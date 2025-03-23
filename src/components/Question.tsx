@@ -38,12 +38,11 @@ const Question = (props: {
                     {props.difficulty}
                 </span>
             </p>
-            <h1 className="font-bold text-xl text-wrap mt-2 mb-0">{decode(props.question)}</h1>
+            <h3 className="font-bold text-base md:text-lg text-justify text-wrap my-1">{decode(props.question)}</h3>
             <form action="" className=''>
-                <div className='flex justify-between gap-x-10 w-fit flex-wrap'>
+                <div className='flex justify-between gap-x-2 md:gap-x-10 flex-wrap'>
                     {answers.map((answer, index) => (
-                        <div key={index} className={`flex flex-row radio-toolbar mb-2`}>
-
+                        <div key={index} className={`flex flex-row radio-toolbar mb-3`}>
                             <input
                                 type="radio"
                                 name={props.id}
@@ -51,8 +50,12 @@ const Question = (props: {
                                 value={decode(answer)}
                                 onChange={props.handleAnswerChange}
                             />
-                            <label htmlFor={props.id + index}>{decode(answer)}</label>
-
+                            <label
+                                htmlFor={props.id + index}
+                                className='cursor-pointer text-sm md:text-base'
+                            >
+                                {decode(answer)}
+                            </label>
                         </div>
                     ))}
                 </div>
