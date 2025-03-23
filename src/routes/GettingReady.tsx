@@ -9,15 +9,23 @@ import {
     Category,
     Difficulty,
     Type,
-} from "./../data";
+} from "../lib/data";
 
 const GettingReady = (props: {
-    setFormData: (formData: { category: number; difficulty: number; type: number }) => void
+    setFormData: (
+        formData: {
+            category: number;
+            difficulty: number;
+            amount: number;
+            type: number;
+        }
+    ) => void
 }) => {
 
     const [formData, setFormData] = useState({
         category: 0,
         difficulty: 0,
+        amount: 5,
         type: 0,
     });
 
@@ -27,13 +35,12 @@ const GettingReady = (props: {
             ...prevFormData,
             [name]: Number(value),
         }));
-    };
 
+    };
     const navigate = useNavigate();
 
     const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
         event.preventDefault();
-        // console.log(formData);
         props.setFormData(formData);
         navigate('/quiz');
     };
@@ -68,6 +75,17 @@ const GettingReady = (props: {
                 >
                     {Object.entries(Difficulty).map(([id, difficulty]) => (
                         <option key={id} value={id}>{difficulty}</option>
+                    ))}
+                </select>
+                <label htmlFor={id + "-amount"} className="cursor-pointer">Select Amount:</label>
+                <select
+                    name="amount"
+                    id={id + "-amount"}
+                    className="mb-4 rounded-lg p-3 cursor-pointer border-2 border-gray-100 hover:border-button-bg"
+                    onChange={handleFormChange}
+                >
+                    {[5, 10, 15].map((amount) => (
+                        <option key={amount} value={amount}>{amount}</option>
                     ))}
                 </select>
                 <label htmlFor={id + "-type"} className="cursor-pointer">Select Type:</label>
